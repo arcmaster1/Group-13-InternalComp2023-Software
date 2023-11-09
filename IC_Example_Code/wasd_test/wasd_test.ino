@@ -1,5 +1,9 @@
 #include <WiFi.h>
-#include <ESPAsyncWebServer.h>
+#include <ESPAsyncWebSrv.h>
+
+//README:
+//Install Libary "ESPAsyncWebServer" before compiling through Arduino IDE Libary Manager
+//Else it will not compile.
 
 const char* ssid = "SBRT";
 const char* password = "Robotic$3";
@@ -28,7 +32,9 @@ String html2 = R"RAW(
 function sendDirection(direction) {
   // Replace with the IP address of your ESP32
   var ip = location.host;
-  var espUrl = 'http://192.168.1.219/control';
+  var espUrl = 'http://';
+  espUrl = espUrl + ip;
+  espUrl = espUrl + '/control';
 
   // Assemble the full URL with the direction parameter
   var fullUrl = espUrl + '?dir=' + direction;
