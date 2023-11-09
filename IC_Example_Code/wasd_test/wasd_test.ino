@@ -125,6 +125,7 @@ void setup() {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
+  Serial.println("Connected! \nPaste this IP address into your browser to control your robot:");
   Serial.println(WiFi.localIP());
 
   // Handle Web Server
