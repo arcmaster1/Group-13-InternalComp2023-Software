@@ -31,7 +31,7 @@ String html2 = R"RAW(
 // Function to send the request to the ESP32
 function sendDirection(direction) {
   // Replace with the IP address of your ESP32
-  var ip = location.host;
+  var ip = window.location.host;
   var espUrl = 'http://';
   espUrl = espUrl + ip;
   espUrl = espUrl + '/control';
